@@ -3,9 +3,19 @@ const context = canvas.getContext("2d");
 const clearBtn = document.getElementById("clearBtn");
 const saveBtn = document.getElementById("saveBtn");
 const strokeWeight = document.getElementById("stroke-weight");
-const color = document.getElementById("color-picker");
+const color = document.getElementById("custom-color");
+const colorOption = [];
 
 let isDrawing = false;
+
+const loadColors = function () {
+  for (let i = 0; i < 8; i++) {
+    colorOption.push(document.getElementById(`color_${i + 1}`));
+    colorOption[i].addEventListener("click", function () {
+      color.value = colorOption[i].style.backgroundColor;
+    });
+  }
+};
 
 const resizeCanvas = function () {
   canvas.width = 800;
@@ -55,6 +65,7 @@ const saveCanvas = function () {
 
 resizeCanvas();
 
+window.addEventListener("onload", loadColors());
 window.addEventListener("resize", resizeCanvas());
 canvas.addEventListener("mousedown", start);
 canvas.addEventListener("mousemove", draw);

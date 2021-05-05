@@ -137,3 +137,39 @@ main .save::after {
   line-height: 0px;
   text-align: center;
 }
+
+main .colors #color-div {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 57px;
+  height: 115px;
+  padding-left: 45px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+main .colors #color-div:focus {
+  display: block;
+}
+main .colors:hover #color-div {
+  display: block;
+}
+
+main .colors #color-div .color-option {
+  display: block;
+  border: #171717 solid 2px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+main .colors #color-div #custom-color {
+  display: block;
+  border: #171717 solid 2px;
+  margin-left: 10px;
+  width: 100px;
+  padding: 0;
+  text-align: center;
+}
