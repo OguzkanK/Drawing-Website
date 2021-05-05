@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSS/bootstrap.css" rel="stylesheet" />
+    <link href="CSS/drawingPage.css" rel="stylesheet" />
+    <title>Drawing Page</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <main>
+      <section class="colors">
+        <input type="" id="color-picker" class="color-picker" value="#171717" />
+      </section>
+      <section class="thickness">
+        <input
+          type="number"
+          id="stroke-weight"
+          class="stroke-weight"
+          value="3"
+          max="100"
+          min="1"
+        />
+      </section>
+      <section><button id="clearBtn" class="clear"></button></section>
+      <section><button id="saveBtn" class="save"></button></section>
+    </main>
+  </body>
+  <script src="JS/drawinPage-script.js"></script>
+</html>

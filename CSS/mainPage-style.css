@@ -1,0 +1,31 @@
+#top-bar {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: aquamarine;
+}
+
+#top-bar button {
+  margin-right: 1%;
+}
+
+#showcase-area img {
+  border: black double 3px;
+  padding: 1%;
+  width: 75%;
+}
+
+#showcase-area p {
+  border: black double 3px;
+  padding: 1%;
+  width: 75%;
+}
+
+#showcase-area div {
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+
+#showcase-area button {
+  height: 90%;
+  justify-content: center;
+}
