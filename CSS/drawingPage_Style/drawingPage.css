@@ -3,12 +3,12 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background: #f3f3f3;
+  background: linear-gradient(to right, #d8e3e7, #51c4d3);
   font-family: "Roboto", "Helvetica", sans-serif;
 }
 main {
   position: absolute;
-  top: 0;
+  top: -18px;
   left: 0;
   bottom: 0;
   width: 50px;
@@ -16,11 +16,17 @@ main {
 }
 
 #canvas {
+  width: 800px;
+  height: 600px;
   background: white;
   margin: 0;
   border-bottom: #171717 solid 5px;
   border-right: #171717 solid 5px;
   cursor: crosshair;
+}
+
+#drawing-name {
+  margin-left: 55px;
 }
 
 main section {
@@ -29,32 +35,54 @@ main section {
   width: 30px;
   height: 30px;
 }
-main .colors {
+main #colors {
   background: #171717;
   border: 1px solid #f3f3f3;
   position: relative;
 }
-main .colors .color-picker {
+
+main #colors #color-picker {
   display: none;
-  width: 200px;
-  height: 30px;
   position: absolute;
-  top: 50%;
-  left: 30px;
+  left: 10px;
+  top: 57px;
+  height: 115px;
+  width: 200px;
+  padding-left: 45px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-main .colors .color-picker:focus {
+main #colors #color-picker:focus {
   display: block;
 }
-main .colors:hover .color-picker {
+main #colors:hover #color-picker {
   display: block;
 }
-main .thickness {
+
+main #colors #color-picker .color-option {
+  display: block;
+  border: #171717 solid 2px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+main .colors #color-picker #custom-color {
+  display: block;
+  border: #171717 solid 2px;
+  margin-left: 10px;
+  width: 100px;
+  padding: 0;
+  text-align: center;
+}
+
+main #thickness {
   position: relative;
   background-color: #f3f3f3;
 }
-main .thickness::after {
+main #thickness::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -66,7 +94,7 @@ main .thickness::after {
   border-radius: 50%;
   background: #171717;
 }
-main .thickness .stroke-weight {
+main #thickness #stroke-weight {
   display: none;
   position: absolute;
   width: auto;
@@ -77,15 +105,15 @@ main .thickness .stroke-weight {
   transform: translateY(-50%);
 }
 
-main .thickness .stroke-weight:focus {
+main #thickness #stroke-weight:focus {
   display: block;
 }
 
-main .thickness:hover .stroke-weight {
+main #thickness:hover #stroke-weight {
   display: block;
 }
 
-main .clear {
+main #clearBtn {
   display: block;
   width: 30px;
   height: 30px;
@@ -99,7 +127,7 @@ main .clear {
   cursor: pointer;
 }
 
-main .clear::after {
+main #clearBtn::after {
   position: relative;
   top: 0;
   bottom: 0;
@@ -112,11 +140,10 @@ main .clear::after {
   text-align: center;
 }
 
-main .save {
+main #saveBtn {
   display: block;
   width: 30px;
   height: 30px;
-  margin: 0 auto;
   color: #171717;
   font-size: 20px;
   font-weight: 900;
@@ -126,50 +153,28 @@ main .save {
   cursor: pointer;
 }
 
-main .save::after {
-  top: 0;
-  bottom: 0;
-  left: -8px;
-  right: 0;
+main #saveBtn::after {
   content: "S";
   font-size: 25px;
   color: #171717;
   line-height: 0px;
-  text-align: center;
 }
 
-main .colors #color-div {
-  display: none;
-  position: absolute;
-  left: 10px;
-  top: 57px;
-  height: 115px;
-  padding-left: 45px;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-main .colors #color-div:focus {
+main #uploadBtn {
   display: block;
-}
-main .colors:hover #color-div {
-  display: block;
-}
-
-main .colors #color-div .color-option {
-  display: block;
-  border: #171717 solid 2px;
-  margin-left: 10px;
-  margin-bottom: 15px;
-  padding: 0;
   width: 30px;
   height: 30px;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: #ffce00;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
-main .colors #color-div #custom-color {
-  display: block;
-  border: #171717 solid 2px;
-  margin-left: 10px;
-  width: 100px;
-  padding: 0;
-  text-align: center;
+main #uploadBtn::after {
+  content: "U";
+  font-size: 25px;
+  color: #171717;
+  line-height: 0px;
 }

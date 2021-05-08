@@ -1,0 +1,1 @@
+A web based application where you can anonymously submit your drawings for others to rate. It uses a REST API made with java to interact with a database.

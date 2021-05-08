@@ -5,42 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="CSS/bootstrap.css" rel="stylesheet" />
-    <link href="CSS/drawingPage.css" rel="stylesheet" />
+    <link href="CSS/drawingPage_Style/drawingPage.css" rel="stylesheet" />
+    <link href="CSS/sidenav-css.css" rel="stylesheet" />
     <title>Drawing Page</title>
   </head>
   <body>
+    <nav id="header">
+      <img id="menu-btn" class="header-child" src="images/menu.png" />
+      <a id="header-text" class="header-child" href="drawingMainPage.html"
+        >Leaderboard</a
+      >
+    </nav>
+
+    <div id="side-nav">
+      <img id="close-btn" src="images/close.png" />
+      <a class="side-link" href="drawingMainPage.html">Çizimler Sıralaması</a>
+      <a class="side-link" href="drawingPage.html">Çiz</a>
+    </div>
     <canvas id="canvas"></canvas>
+    <input id="drawing-name" type="text" value="Drawing Name" />
     <main>
-      <section class="colors">
-        <div id="color-div" class="color-picker container">
+      <section id="colors">
+        <div id="color-picker" class="container">
           <div class="row">
-            <button id="color_1" style="background-color: #ffffff;" class="color-option"></button>
-            <button id="color_2" style="background-color: #000000;" class="color-option"></button>
-            <button id="color_3" style="background-color: #ff0000;" class="color-option"></button>
-            <button id="color_4" style="background-color: #8800ff;" class="color-option"></button>
+            <button
+              id="color_1"
+              style="background-color: #ffffff"
+              class="color-option"
+            ></button>
+            <button
+              id="color_2"
+              style="background-color: #000000"
+              class="color-option"
+            ></button>
+            <button
+              id="color_3"
+              style="background-color: #ff0000"
+              class="color-option"
+            ></button>
+            <button
+              id="color_4"
+              style="background-color: #8800ff"
+              class="color-option"
+            ></button>
           </div>
           <div class="row">
-            <button id="color_5" style="background-color: #0000ff;" class="color-option"></button>
-            <button id="color_6" style="background-color: #00ff00;" class="color-option"></button>
-            <button id="color_7" style="background-color: #ffff00;" class="color-option"></button>
-            <button id="color_8" style="background-color: #ff8000;" class="color-option"></button>
-            <input id="custom-color" value="rgb(0, 0, 0)"></input>
+            <button
+              id="color_5"
+              style="background-color: #0000ff"
+              class="color-option"
+            ></button>
+            <button
+              id="color_6"
+              style="background-color: #00ff00"
+              class="color-option"
+            ></button>
+            <button
+              id="color_7"
+              style="background-color: #ffff00"
+              class="color-option"
+            ></button>
+            <button
+              id="color_8"
+              style="background-color: #ff8000"
+              class="color-option"
+            ></button>
+            <input id="custom-color" value="rgb(0, 0, 0)" type="text" />
           </div>
         </div>
       </section>
-      <section class="thickness">
-        <input
-          type="number"
-          id="stroke-weight"
-          class="stroke-weight"
-          value="3"
-          max="100"
-          min="1"
-        />
+      <section id="thickness">
+        <input type="number" id="stroke-weight" value="3" max="100" min="1" />
       </section>
-      <section><button id="clearBtn" class="clear"></button></section>
-      <section><button id="saveBtn" class="save"></button></section>
+      <section><button id="clearBtn"></button></section>
+      <section><button id="saveBtn"></button></section>
+      <section><button id="uploadBtn"></button></section>
     </main>
+    <footer id="end-footer">Oğuzkan Kaptan</footer>
   </body>
-  <script src="JS/drawinPage-script.js"></script>
+  <script src="JS/drawingPage_Files/drawinPage-script.js"></script>
+  <script src="JS/sidenav.js"></script>
 </html>

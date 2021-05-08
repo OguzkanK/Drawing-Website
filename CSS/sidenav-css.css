@@ -1,0 +1,92 @@
+#header {
+  border-bottom: 3px solid black;
+  background: linear-gradient(to right, #d8e3e7, #51c4d3);
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.header-child {
+  font-size: 40px;
+  float: left;
+}
+#header-text {
+  margin: auto;
+  width: 50%;
+  padding: 17px;
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+}
+
+#menu-btn {
+  width: 80px;
+  margin: auto;
+  padding: 0px;
+}
+
+#side-nav {
+  /* yan menü görünüşü */
+  height: 100%;
+  width: 0; /* JS tarafından değiştirilecek */
+  position: fixed; /* yerinde durması için */
+  z-index: 2; /* tepede durması için */
+  top: 0;
+  left: 0;
+  background-color: #132c33;
+  overflow-x: hidden; /* scrollibng kapalı */
+  padding-top: 60px; /* üstten 60 ox boşluk */
+  transition: 0.5s; /* menünün geçiş süresi */
+}
+
+.side-link {
+  /* yan menüdeki linkler */
+  padding: 8px 8px 8px 32px;
+  font-size: 35px;
+  text-decoration: none; /* linkteki alt çizgiyi kaldırır */
+  color: #7a7a7a;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-link:hover {
+  /* linkin üstünde fareyi tutunca */
+  color: #e6e6e6;
+}
+
+#close-btn {
+  display: none;
+  position: fixed;
+  color: white;
+  top: 15px;
+  left: 10px;
+  width: 40px;
+}
+
+@media screen and (max-height: 450px) {
+  /* boyu 450 px den küçük ekranlara özel padding için */
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+main {
+  margin-top: 95px;
+}
+
+#end-footer {
+  border-top: 3px solid black;
+  background: linear-gradient(to right, #d8e3e7, #51c4d3);
+  color: #132c33;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
