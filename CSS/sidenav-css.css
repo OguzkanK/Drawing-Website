@@ -11,20 +11,25 @@
 .header-child {
   font-size: 40px;
   float: left;
+  margin-bottom: 100px;
 }
 #header-text {
-  margin: auto;
-  width: 50%;
-  padding: 17px;
+  margin: 0;
+  top: 50%;
+  padding-top: 80px;
+  padding-left: 15px;
   text-decoration: none;
   color: black;
   font-family: sans-serif;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 #menu-btn {
   width: 80px;
   margin: auto;
   padding: 0px;
+  cursor: pointer;
 }
 
 #side-nav {
@@ -36,8 +41,8 @@
   top: 0;
   left: 0;
   background-color: #132c33;
-  overflow-x: hidden; /* scrollibng kapalı */
-  padding-top: 60px; /* üstten 60 ox boşluk */
+  overflow-x: hidden; /* scrolling kapalı */
+  padding-top: 60px; /* üstten 60 px boşluk */
   transition: 0.5s; /* menünün geçiş süresi */
 }
 

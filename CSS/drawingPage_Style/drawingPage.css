@@ -67,6 +67,7 @@ main #colors #color-picker .color-option {
   padding: 0;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 main .colors #color-picker #custom-color {
